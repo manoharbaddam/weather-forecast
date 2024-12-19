@@ -8,76 +8,75 @@
   <link rel="stylesheet" href="output.css">
 </head>
 
-<body class="bg-gradient-to-t from-blue-400  to-blue-600 font-poppins">
+<body class="bg-gradient-to-t from-blue-400  to-blue-600 font-poppins h-screen ">
   <header class="text-white px-4">
     <div class="flex flex-row items-center justify-between  px-5  text-2xl">
 
-      <div class="logo py-3 font text-6xl">
+      <div class="logo py-3 font-bold text-4xl md:text-6xl ">
         <span>Weather Forecast</span>
       </div>
 
-      <!-- <div class="flex flex-row text-2xl px-10 font-thin  gap-8"> -->
+      <!-- <div class="flex flex-col items-end">
+        <span id="date" class="text-lg md:text-2xl"></span>
+        <span id="clock" class="text-lg md:text-2xl"></span>
+      </div> -->
+
       <span id="date"></span>
-
-      <!-- </div> -->
-
-      <!-- <div class="flex flex-row justify-end text-2xl font-thin gap-4 px-10 "> -->
       <span id="clock"></span>
-      <!-- </div> -->
-    </div>
+
   </header>
 
-  <div class="flex flex-row justify-center mt-10 ">
-    <div class="search flex flex-row w-4/12 mx-10 items-center justify-center gap-2">
-      <input type="text" class="h-10 w-full border rounded-2xl px-4" placeholder="Enter City Name" spellcheck="false">
-      <button class="h-12 w-12"><img src="/assets/search.png" alt="search"></button>
+  <div class="flex  justify-center mt-10 ">
+    <div class="search flex  w-11/12 md:w-6/12 lg:w-4/12 items-center gap-4">
+      <input type="text"
+        class="h-12 w-full border rounded-2xl px-4 text-gray-700 focus:ring focus:ring-blue-300 outline-none"
+        placeholder="Enter City Name" spellcheck="false">
+      <button class="h-12 w-12 flex items-center justify-center rounded-full bg-white hover:bg-gray-200"><img
+          src="/assets/search.png" alt="search" class="h-6 w-6"></button>
     </div>
   </div>
 
-
-  <div class="flex flex-row justify-center ">
-    <section class="w-8/12 border rounded-xl m-32 mt-10 text-gray-600 body-font overflow-hidden">
-
+  <div class="flex justify-center ">
+    <section class="w-11/12 md:w-9/12 lg:w-8/12 border rounded-xl mt-10 text-gray-600 body-font overflow-hidden ">
       <div class="container px-5 py-5 mx-auto">
-
-        <div class="text-2xl text-white" id="location">
+        <div class="text-2xl md:text-3xl text-white" id="location">
           Hyderabad
         </div>
 
-        <div class="flex flex-row justify-center gap-4 mt-10">
+        <div class="flex flex-row justify-center gap-6 mt-10 items-center">
 
-          <span class="text-8xl text-white " id="temperature"></span>
-          
-          <div class="flex flex-col  text-opacity-80 gap-0">
-            <span class="text-4xl text-white" >o</span>
-            <span class="text-5xl text-white">C</span>
+          <span class="text-6xl md:text-8xl text-white " id="temperature"></span>
+
+          <div class="flex flex-col items-center">
+            <span class="text-3xl md:text-4xl text-white">o</span>
+            <span class="text-4xl md:text-5xl text-white">C</span>
           </div>
 
-          <span class="text-xl w-24  "><img src="/assets/clouds.png" alt=""></span>
+          <span class="w-16 md:w-24">
+            <img src="/assets/clouds.png" alt="Weather Icon">
+          </span>
         </div>
       </div>
 
-      <div class="flex flex-row items-center justify-between px-10 py-5 mb-10 gap-2 font-medium mt-10 text-white">
+      <div class="flex flex-wrap justify-between px-4 md:px-10 py-5 gap-4 text-center text-white">
 
-        <div class="flex flex-col items-center border rounded-2xl w-2/12 max-h-max p-2 ">
-          <span class="">HUMIDITY</span>
-          <span id="humidity">value</span>
+        <div class="flex flex-col items-center border rounded-2xl w-full md:w-2/12 p-2 ">
+          <span class="font-medium">HUMIDITY</span>
+          <span id="humidity" class="text-xl">value</span>
         </div>
-        <div class="flex flex-col items-center border rounded-2xl w-2/12 max-h-max p-2">
-          <span>VISIBILITY</span>
-          <span id="visibility">value</span>
+        <div class="flex flex-col items-center border rounded-2xl w-full md:w-2/12 p-2">
+          <span class="font-medium">VISIBILITY</span>
+          <span id="visibility" class="text-xl">value</span>
         </div>
-        <div class="flex flex-col items-center border rounded-2xl w-2/12 max-h-max p-2">
-          <span>AIR PRESSURE</span>
-          <span id="airPressure">value</span>
+        <div class="flex flex-col items-center border rounded-2xl w-full md:w-2/12 p-2">
+          <span class="font-medium">AIR PRESSURE</span>
+          <span id="airPressure" class="text-xl">value</span>
         </div>
-        <div class="flex flex-col items-center border rounded-2xl w-2/12 max-h-max p-2">
-          <span>WIND</span>
-          <span id="wind">Value</span>
+        <div class="flex flex-col items-center border rounded-2xl w-full md:w-2/12 p-2">
+          <span class="font-medium">WIND</span>
+          <span id="wind" class="text-xl">Value</span>
         </div>
-
       </div>
-
     </section>
   </div>
 
